@@ -1,4 +1,4 @@
-/*********** Base styles **********/
+/********** Base styles **********/
 * {
   box-sizing: border-box;
 }
@@ -7,16 +7,13 @@ h1 {
   text-align: center;
 }
 
-/*********** Menu Labels ******div****/
+/*********** Menu Labels **************/
 .menu_label {
   float: right;
   width: 120px;
   padding: 3px;
   text-align: center;
-  border: 3px solid #000000;
-  position: absolute;
-  right:2px;
-  top:2px;
+  border: 3px solid black;
 }
 #chicken {
   background-color: #6B953D;
@@ -29,37 +26,33 @@ h1 {
   background-color: #E31863;
 }
 
-/*********** Menu Description ****section******/
+/*****************Menu Description **************/
 .menu_description{
-  //background-color: #949191;
-  background-color: green;
-  float: left;
+  background-color: #949191;
   margin: auto;
   height: 200px;
-  padding:10px; // space around text
-  border:5px solid #000000;
-  overflow: auto;  // puts up scroll bars as needed
-
-}
-
-/*********** Menu Item contains Menu Label div & section */
-.menu_item {
   float: left;
-  position: relative;
-  padding: 5px;
-  margin: auto;
-  background-color: yellow;
-  border: 5px solid red;
+  padding:3px;
+  display: flex;
 }
 
-/*********** Simple Responsive Framework. Outermost div */
+/* Simple Responsive Framework. */
 .row {
   width: 100%;
+  border: 5px;
+  background-color: yellow;
 }
 
-/********** sizing for the menu_item above **********/
 /********** desktop devices only **********/
 @media (min-width: 992px) {
+  .col-lg-4 {
+    float: left;
+    border: 1px solid #008000;
+    background-color: black;
+    position: relative;
+    padding: 3px;
+    margin: auto;
+  }
   .col-lg-4 {
     width: 33.33%;
   }
@@ -67,6 +60,14 @@ h1 {
 
 /********** tablet devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  .col-md-6,  .col-md-12 {
+    float: left;
+    border: 1px solid #008000;
+    background-color: #000000;
+        position: relative;
+    padding: 3px;
+    margin: auto;
+  }
   .col-md-6 {
     width: 50%;
   }
@@ -78,6 +79,14 @@ h1 {
 /********** mobile devices only **********/
 @media (max-width: 767px) {
 .col-sm-12 {
+  float: left;
+  border: 1px solid #008000;
+  background-color: #000000;
+  position: relative;
+    padding: 3px;
+    margin: auto;
+  }
+  .col-sm-12 {
     width: 100%;
   }
 }
